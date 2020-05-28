@@ -23,13 +23,15 @@ def index():
 @app.route('/add_contact', methods=['POST'])
 def add_contact():
     if request.method == 'POST':
-        fullname = request.form['fullname']
-        phone = request.form['phone']
-        email = request.form['email']
+        nombre = request.form['nombre']
+        apellido = request.form['apellido']
+        direccion = request.form['direccion']
+        contacto = request.form['contacto']
+        pago = request.form['pago']
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO contacts (fullname, phone, email) VALUES (%s,%s,%s)", (fullname, phone, email))
+        cur.execute("INSERT INTO pedido (Nombre, Apellido, Direccion, Contacto, Pago) VALUES (%s,%s,%s)", (nombre, apellido, direccion, contacto, pago))
         mysql.connection.commit()
-        flash('Contact Added successfully')
+        flash('Pedido realizado con extio!!')
         return redirect(url_for('exito'))  
 
 

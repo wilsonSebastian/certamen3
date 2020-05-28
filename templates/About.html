@@ -14,13 +14,19 @@ div {text-align: center;}
 <div class="card card-body">
   <form action="{{url_for('add_contact')}}" method="POST">
     <div class="form-group">
-      <input type="text" class="form-control" name="fullname" placeholder="FullName">
+      <input type="text" class="form-control" name="nombre" placeholder="Nombre">
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" name="email" placeholder="Email">
+      <input type="text" class="form-control" name="apellido" placeholder="Apellido">
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" name="phone" placeholder="Phone">
+      <input type="text" class="form-control" name="direccion" placeholder="Direccion entrega">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="contacto" placeholder="Num contacto">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="pago" placeholder="A la entrega o transferencia">
     </div>
     <button class="btn btn-primary btn-block">
       Realizar pedido 
