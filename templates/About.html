@@ -11,23 +11,22 @@ div {text-align: center;}
 <h1>Formulario de compra</h1>
 <p>Complete con los datos solicitados</p>
 
-<div>
-    <form action="">
-    <label for="fname">Nombre:</label><br>
-    <input type="text" id="fname" name="fname" ><br>
-    <label for="lname">Apellidos:</label><br>
-    <input type="text" id="lname" name="lname" ><br>
-    <label for="fname">Dirección:</label><br>
-    <input type="text" id="fname" name="fname" ><br>
-    <label for="fname">Contacto:</label><br>
-    <input type="text" id="fname" name="fname" ><br><br>
-    <label for="male">Transferencia</label><br>
-    <input type="radio" id="male" name="gender" value="male"><br>
-    <label for="female">A la entrega</label><br>
-    <input type="radio" id="female" name="gender" value="female"><br><br>
-   
-    <input type="submit" value="Pagar y solicitar">
+<div class="card card-body">
+  <form action="{{url_for('add_contact')}}" method="POST">
+    <div class="form-group">
+      <input type="text" class="form-control" name="fullname" placeholder="FullName">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="phone" placeholder="Phone">
+    </div>
+    <button class="btn btn-primary btn-block">
+      Realizar pedido 
+    </button>
   </form>
+</div>
 </div>
 
 </body>
